@@ -5,6 +5,10 @@ import sys
 import stevedore.driver
 
 
+def format_and_print(extension, s):
+    print(extension.plugin(s))
+
+
 def main():
     try:
         driver_name = sys.argv[1]
@@ -12,4 +16,4 @@ def main():
         driver_name = 'plain'
 
     em = stevedore.driver.DriverManager('plugin_test_driver', driver_name)
-    em(lambda ext: print(ext.plugin('Hello world!')))
+    em.map(format_and_print, 'Hello world!')
