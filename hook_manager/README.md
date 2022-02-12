@@ -8,7 +8,7 @@ https://docs.openstack.org/stevedore/latest/user/patterns_loading.html#hooks-sin
 
 Install:
 
-    pip install src_mgr src_a src_b
+    pip install ./src_mgr ./src_a ./src_b
 
 Run:
 
