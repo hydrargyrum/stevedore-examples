@@ -15,5 +15,8 @@ def main():
     except IndexError:
         driver_name = 'plain'
 
+    # `plugin_test_driver` is the name of the "rendez-vous" for all our drivers
+    # each of our driver has a unique name, but all of them share the `plugin_test_driver` namespace
+    # each of our driver should register itself to "plugin_test_driver"
     em = stevedore.driver.DriverManager('plugin_test_driver', driver_name)
     em.map(format_and_print, 'Hello world!')

@@ -3,6 +3,9 @@
 Drivers are designed to provide the same sort of functionality but implemented differently or on a different backend, but only one driver will be chosen by the app.
 For example, database drivers for having an app working on SQLite or on MySQL, or an output format.
 
+An app needing drivers is a "driver-manager".
+Drivers can be separate PyPI packages, installed independantly.
+
 https://docs.openstack.org/stevedore/latest/user/patterns_loading.html#drivers-single-name-single-entry-point
 
 # Run example
